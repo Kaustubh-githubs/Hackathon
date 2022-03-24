@@ -1,9 +1,15 @@
-
-
-
 import 'package:flutter/material.dart';
+import 'package:mediguide/login.dart';
+import 'package:mediguide/register.dart';
 
-// this is the code for the master branch that is in the experimental branch
+
 void main() {
-
-};
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyLogin(),
+    routes: {
+      'register': (context) => MyRegister(),
+      'login': (context) => MyLogin(),
+    },
+  ));
+}
